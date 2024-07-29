@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Subject from "./mydir/Subject";
+import Func from "./mydir/Func";
 
 
 // const App = () => {
@@ -27,8 +28,12 @@ function App() {
   return (
     <div className="App">
       <h1>EVENT TEST</h1><br />
-      <Subject title = {subject.title} subtitle = {subject.subtitle} onChangePage = {handelChangePage}/>
-      {/* onChangePage : App에서 Subject 컴포넌트로 전달되는 이벤트 핸들러(JavaScript가 가지고 있는 Event) */}
+      <Subject title = {subject.title} subtitle = {subject.subtitle} changePage = {handelChangePage}/>
+      {/* title, subtitle, changePage : App에서 Subject 컴포넌트로 전달되는 props page */}
+
+
+      <br /><br />
+      <Func subtitle = {subject.subtitle} friends={friends} changePage = {handelChangePage}/>
     </div>
   );
 }
